@@ -1,0 +1,19 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  .input-label {
+    margin: 0.5rem 0;
+  }
+
+  .input-box,
+  .input-box:focus-visible {
+    border-radius: 5px;
+    margin: 0 0 0 0.5rem;
+    border: none;
+    border-bottom: 1px solid #8d8d8d;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    outline: none;
+  }
+}

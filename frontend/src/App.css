@@ -1,0 +1,13 @@
+.App {
+  direction: rtl;
+  text-align: center;
+}
+
+.DeleteIcon:hover {
+  color: red;
+}
+
+.FavoriteIcon:hover,
+.FavoritedIcon {
+  color: chocolate;
+}

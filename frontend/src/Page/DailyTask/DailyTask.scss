@@ -1,0 +1,11 @@
+.DailyTask {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .DTTodo {
+    margin-bottom: 2rem;
+  }
+  h4 {
+    text-align: right;
+  }
+}

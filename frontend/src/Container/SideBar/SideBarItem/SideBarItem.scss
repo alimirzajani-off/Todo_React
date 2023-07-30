@@ -1,0 +1,23 @@
+.SBItem {
+  display: flex;
+  .SBIFormName {
+    display: flex;
+    padding: 0.5rem;
+    margin: 0.05rem;
+    width: 100%;
+    color: currentcolor;
+    border-radius: 5px;
+    text-decoration: auto;
+  }
+  .SBIFormName:hover {
+    background-color: #7a797962;
+  }
+  .SBITitle {
+    margin-right: 7px;
+  }
+}
+
+.SBIActive {
+  background-color: #7a797962;
+  border-radius: 5px;
+}

@@ -1,0 +1,32 @@
+.TodoItem {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  // padding: 10px 0;
+  .TICDetail {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .TITitle {
+    width: 100%;
+    text-align: right;
+    height: 100%;
+    line-height: 2.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 544px;
+  }
+  .TITitleDone {
+    text-decoration: line-through;
+  }
+}
+.TodoItem:hover,
+.TodoItemActive {
+  background: #b6b6b63d;
+}

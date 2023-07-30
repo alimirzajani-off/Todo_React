@@ -1,0 +1,22 @@
+.SignIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../../../assets/image/1302869.jpg");
+  .SingInBox {
+    width: 20rem;
+    border-radius: 5px;
+    margin: auto;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    background-color: #ffffff;
+    .input {
+      padding: 1rem 0.5rem;
+    }
+    .SingIn-button {
+      margin: 1rem 0;
+    }
+  }
+}

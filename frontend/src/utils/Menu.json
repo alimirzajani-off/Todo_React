@@ -1,0 +1,8 @@
+[
+  { "name": "صفحه اصلی", "icon": "IoHomeOutline", "to": "/" },
+  {
+    "name": "کار های انجام شده",
+    "icon": "IoCheckboxOutline",
+    "to": "/CompleteTask"
+  }
+]

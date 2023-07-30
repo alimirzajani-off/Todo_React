@@ -1,0 +1,56 @@
+.TodoDetail {
+  .TIBody {
+    margin: 0 5%;
+    display: contents;
+    .TIHeader {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      justify-content: space-between;
+      height: 6.5rem;
+      .TIHDetail {
+        width: 100%;
+        h3 {
+          word-wrap: break-word;
+          text-align: right;
+          margin: 0;
+          max-width: 25vh;
+          white-space: pre-wrap;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+    .TIContents {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0.5rem 1rem;
+      margin: auto 0;
+      height: 100%;
+      .TIContent {
+        margin-bottom: 1rem;
+        .TICTitle {
+          text-align: right;
+        }
+      }
+      .TICPriority {
+        select {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .TIFooter {
+    display: flex;
+    padding: 10px 5px;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    // position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

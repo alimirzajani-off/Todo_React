@@ -1,0 +1,38 @@
+.Todo {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;
+  .TodoList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 5%;
+    margin-right: 35vh;
+    align-content: flex-start;
+  }
+  .DetailOn {
+    margin-left: 37vh;
+    margin-right: 29vh;
+    .TITitle {
+      max-width: 367px;
+    }
+  }
+  .TodoDetail {
+    display: flex;
+    width: 35vh;
+    position: fixed;
+    left: 0;
+    flex-direction: column;
+    // min-height: 100%;
+    top: 1rem;
+    bottom: 1rem;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    justify-content: space-between;
+    background: #ffff;
+  }
+}
