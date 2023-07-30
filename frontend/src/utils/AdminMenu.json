@@ -1,0 +1,8 @@
+[
+  { "name": "صفحه اصلی", "icon": "IoHomeOutline", "to": "/Admin" },
+  {
+    "name": "کاربران",
+    "icon": "IoCheckboxOutline",
+    "to": "/Admin/Users"
+  }
+]

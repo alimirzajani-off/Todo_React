@@ -3,6 +3,7 @@ import { Input } from "../../../Components/Inputs/Input/Input";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.scss";
+import { toast } from "react-toastify";
 
 export const SignUp = () => {
   const navigate = useNavigate();
@@ -10,15 +11,23 @@ export const SignUp = () => {
   const [password, setpassword] = useState("");
   const [email, setemail] = useState("");
 
-  const HandleSignUp = () => {
+  const HandleSignUp = (e) => {
+    e.preventDefault();
     const data = {
       username,
       password,
       email,
     };
-    axios.post("http://localhost:5000/user/signup", data).then((res) => {
-      navigate("/SignIn");
-    });
+    axios
+      .post("http://localhost:5000/user/signup", data)
+      .then((res) => {
+        navigate("/SignIn");
+      })
+      .catch((e) => {
+        if (e.response.data.message) {
+          toast.error("با عنوان ادمین نمیتوانید اکانتی ایجاد کنید");
+        }
+      });
   };
 
   return (

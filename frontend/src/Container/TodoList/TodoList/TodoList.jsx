@@ -2,6 +2,7 @@ import { TodoItem } from "../TodoItem/TodoItem";
 import { Outlet, Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./TodoList.scss";
+import Menu from "../../../utils/Menu.json";
 import { useEffect, useState } from "react";
 import { TodoInput } from "../../TodoInput/TodoInput";
 import { TodoDetail } from "../TodoDetail/TodoDetail";
@@ -24,7 +25,7 @@ export const TodoList = (props) => {
 
   return (
     <div className="Todo">
-      <SideBar />
+      <SideBar Menu={Menu} />
       <div className={`TodoList ${Detail ? "DetailOn" : ""}`}>
         <TodoInput Update={props.Update} />
         <Outlet context={[changeDetail, Detail]} />

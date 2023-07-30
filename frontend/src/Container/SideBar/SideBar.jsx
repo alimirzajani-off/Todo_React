@@ -1,15 +1,9 @@
-import {
-  IoSettingsOutline,
-  IoExitOutline,
-  IoPersonCircleOutline,
-} from "react-icons/io5";
+import { IoSettingsOutline, IoExitOutline } from "react-icons/io5";
 import { Popover } from "antd";
-import Menu from "../../utils/Menu.json";
 import "./SideBar.scss";
 import { SideBarItem } from "./SideBarItem/SideBarItem";
-import { Link } from "react-router-dom";
 
-export const SideBar = () => {
+export const SideBar = ({ Menu = [] }) => {
   const handleLogOut = () => {
     localStorage.removeItem("jwt");
     window.location.reload(false);

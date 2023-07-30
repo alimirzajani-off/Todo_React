@@ -34,10 +34,8 @@ export const TodoDetail = ({ ...rest }) => {
   }, [rest.id]);
 
   const getData = () => {
-    console.log(rest);
     axios.get(`http://localhost:5000/todos/${rest.id}`).then((res) => {
       setDetail(res.data);
-      console.log(res.data);
       if (res.data.detail) {
         setDescription(res.data.detail);
       } else if (res.data.timeStart) {

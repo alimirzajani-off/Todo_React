@@ -15,6 +15,12 @@ export const signUp = async (req, res) => {
     if (user) {
       return res.status(400).json({ message: "user already exists" });
     }
+    if (
+      email.toLowerCase().includes("admin") ||
+      username.toLowerCase().includes("admin")
+    ) {
+      return res.status(400).json({ message: "user already exists" });
+    }
     const salt = await bcrypt.genSalt(10);
     newuser.password = await bcrypt.hash(password, salt);
     await newuser.save();
@@ -64,9 +70,19 @@ export const signIn = async (req, res) => {
   }
 };
 
-export const getUser = async (req, res) => {
+export const getAllUser = async (req, res) => {
   try {
-    const user = await User.findById(req.body.id);
+    const user = await User.find();
+    res.json(user);
+  } catch {
+    json.status(500).json({ message: error.message });
+  }
+};
+
+export const getUserById = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    console.log(user);
     res.json(user);
   } catch {
     res.send({ message: "Error in Fetching user" });

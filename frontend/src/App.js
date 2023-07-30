@@ -12,6 +12,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { DailyTask } from "./Page/DailyTask/DailyTask";
 import { CompleteTask } from "./Page/CompleteTask/CompleteTask";
 import { UserProfile } from "./Page/UserProfile/UserProfile";
+import { Admin } from "./Page/Admin/Admin";
+import { Users } from "./Page/Admin/Users/Users";
 
 function App() {
   const [Data, setData] = useState([]);
@@ -45,6 +47,10 @@ function App() {
               path="CompleteTask"
               element={<CompleteTask DataList={Data} Update={getData} />}
             ></Route>
+          </Route>
+          <Route path="/Admin" element={<Admin />}>
+            <Route path="/Admin" element={<>hids</>}></Route>
+            <Route path="/Admin/Users" element={<Users />}></Route>
           </Route>
           <Route path="/UserProfile" element={<UserProfile />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>

@@ -19,7 +19,14 @@ export const SignIn = () => {
       .then((res) => {
         localStorage.setItem("jwt", res.data.token);
         localStorage.setItem("id", res.data.id);
-        navigate("/");
+        if (
+          email.toLowerCase().includes("admin") ||
+          password.toLowerCase().includes("admin")
+        ) {
+          navigate("/admin");
+        } else {
+          navigate("/");
+        }
       })
       .catch((res) => toast.error("!نام کاربری و یا رمز عبور نادرست است"));
   };
