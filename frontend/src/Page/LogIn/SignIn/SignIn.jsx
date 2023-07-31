@@ -23,8 +23,10 @@ export const SignIn = () => {
           email.toLowerCase().includes("admin") ||
           password.toLowerCase().includes("admin")
         ) {
+          localStorage.setItem("admin", true);
           navigate("/admin");
         } else {
+          localStorage.setItem("admin", false);
           navigate("/");
         }
       })

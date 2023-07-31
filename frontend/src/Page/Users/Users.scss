@@ -1,0 +1,15 @@
+.AUsers {
+  .AUTable {
+    width: 100%;
+    .AUTHeader {
+      top: 0;
+      position: sticky;
+      width: 100%;
+      height: 5rem;
+      background: rgb(255, 255, 255);
+    }
+  }
+  tr: nth-child(even) {
+    background-color: #999;
+  }
+}

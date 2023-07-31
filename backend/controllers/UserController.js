@@ -82,7 +82,6 @@ export const getAllUser = async (req, res) => {
 export const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-    console.log(user);
     res.json(user);
   } catch {
     res.send({ message: "Error in Fetching user" });

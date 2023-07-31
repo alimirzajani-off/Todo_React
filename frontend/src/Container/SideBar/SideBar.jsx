@@ -2,11 +2,14 @@ import { IoSettingsOutline, IoExitOutline } from "react-icons/io5";
 import { Popover } from "antd";
 import "./SideBar.scss";
 import { SideBarItem } from "./SideBarItem/SideBarItem";
+import { useNavigate } from "react-router-dom";
 
 export const SideBar = ({ Menu = [] }) => {
+  const navigate = useNavigate();
   const handleLogOut = () => {
     localStorage.removeItem("jwt");
-    window.location.reload(false);
+    localStorage.removeItem("admin");
+    navigate("/SignIn");
   };
   return (
     <div className="SideBar">

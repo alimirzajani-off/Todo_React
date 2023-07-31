@@ -16,6 +16,10 @@ export const TodoList = (props) => {
     if (!jwt) {
       navigate("/signin");
     }
+
+    if (localStorage.getItem("admin") == true) {
+      navigate("/admin");
+    }
     props.Update();
   }, []);
 

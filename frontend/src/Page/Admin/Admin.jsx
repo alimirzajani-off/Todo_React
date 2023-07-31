@@ -6,7 +6,7 @@ export const Admin = () => {
   return (
     <>
       <SideBar Menu={Menu} />
-      <div className="Admin">
+      <div className="AdminContent">
         <Outlet />
       </div>
     </>

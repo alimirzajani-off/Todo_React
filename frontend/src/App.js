@@ -13,7 +13,8 @@ import { DailyTask } from "./Page/DailyTask/DailyTask";
 import { CompleteTask } from "./Page/CompleteTask/CompleteTask";
 import { UserProfile } from "./Page/UserProfile/UserProfile";
 import { Admin } from "./Page/Admin/Admin";
-import { Users } from "./Page/Admin/Users/Users";
+import { Users } from "./Page/Users/Users";
+import { UserInfo } from "./Page/Users/UserInfo/UserInfo";
 
 function App() {
   const [Data, setData] = useState([]);
@@ -51,6 +52,7 @@ function App() {
           <Route path="/Admin" element={<Admin />}>
             <Route path="/Admin" element={<>hids</>}></Route>
             <Route path="/Admin/Users" element={<Users />}></Route>
+            <Route path="/Admin/Users/:id" element={<UserInfo />}></Route>
           </Route>
           <Route path="/UserProfile" element={<UserProfile />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
