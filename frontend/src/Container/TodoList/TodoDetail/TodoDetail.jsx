@@ -48,12 +48,6 @@ export const TodoDetail = ({ ...rest }) => {
       }
     });
   };
-  console.log(
-    new DateObject({
-      date: new Date(TimeStart),
-      calendar: persian,
-    })
-  );
 
   const handleCheckBox = async (e) => {
     let status;

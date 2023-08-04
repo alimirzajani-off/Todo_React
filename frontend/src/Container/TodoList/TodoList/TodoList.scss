@@ -1,3 +1,94 @@
+@media screen and (max-width: 880px) {
+  .Todo {
+    background-color: aqua;
+    .TodoList {
+      margin-right: 5% !important;
+    }
+    .todoInputs {
+      top: 5.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 5rem;
+      width: 100%;
+    }
+  }
+  .UserInfo {
+    margin-top: 5rem;
+  }
+  .AdminContent {
+    margin-right: 0 !important;
+  }
+  .SideBar {
+    top: 0 !important;
+    width: 100% !important;
+    height: max-content;
+    z-index: 100;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-left-radius: 0 !important;
+    .SideBarItems {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .TodoDetail {
+    z-index: 150;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .TodoItem {
+    height: initial !important;
+    min-height: 2.5rem;
+  }
+  .TITitle {
+    line-height: 1.5 !important;
+    line-break: auto !important;
+    white-space: normal !important;
+  }
+}
+@media screen and (max-width: 557px) {
+  .todoButton {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .TITitle {
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 407px) {
+  .Todo {
+    .todoInputs {
+      top: 7.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 7rem !important;
+    }
+  }
+  .TITitle {
+    max-width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 324px) {
+  .TITitle {
+    max-width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 273px) {
+  .Todo {
+    .todoInputs {
+      top: 9.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 9rem !important;
+    }
+  }
+}
 .Todo {
   display: flex;
   align-items: stretch;
@@ -11,6 +102,9 @@
     margin: 0 5%;
     margin-right: 35vh;
     align-content: flex-start;
+    .TodoLists {
+      width: 100%;
+    }
   }
   .DetailOn {
     margin-left: 37vh;

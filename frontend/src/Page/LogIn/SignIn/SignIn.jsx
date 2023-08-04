@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { Input } from "../../../Components/Inputs/Input/Input";
 import "./SignIn.scss";
+import { IoLogInOutline } from "react-icons/io5";
 export const SignIn = () => {
   const navigate = useNavigate();
   const [password, setpassword] = useState("");
@@ -24,7 +25,7 @@ export const SignIn = () => {
           password.toLowerCase().includes("admin")
         ) {
           localStorage.setItem("admin", true);
-          navigate("/admin");
+          navigate("/Admin");
         } else {
           localStorage.setItem("admin", false);
           navigate("/");
@@ -51,7 +52,7 @@ export const SignIn = () => {
             className="btn btn-success SingIn-button"
             onClick={HandleSignIn}
           >
-            ورود
+            ورود <IoLogInOutline />
           </button>
           <div>
             <Link to="/SignUp">ثبت نام</Link>

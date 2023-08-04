@@ -4,7 +4,12 @@ import { ToastContainer } from "react-toastify";
 import { SignUp } from "./Page/LogIn/SignUp/SignUp";
 import { SignIn } from "./Page/LogIn/SignIn/SignIn";
 import { TodoList } from "./Container/TodoList/TodoList/TodoList";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,9 +20,11 @@ import { UserProfile } from "./Page/UserProfile/UserProfile";
 import { Admin } from "./Page/Admin/Admin";
 import { Users } from "./Page/Users/Users";
 import { UserInfo } from "./Page/Users/UserInfo/UserInfo";
+import { ImportantTask } from "./Page/ImportantTask/ImportantTask";
 
 function App() {
   const [Data, setData] = useState([]);
+  // const navigate = useNavigate();
   const getData = async () => {
     let jwt = localStorage.getItem("jwt");
     await axios
@@ -27,31 +34,19 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
-
   return (
     <div className="App">
       <ToastContainer theme="colored" position="bottom-right" />
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={<TodoList DataList={Data} Update={getData} />}
-          >
-            <Route
-              path="/"
-              element={<DailyTask DataList={Data} Update={getData} />}
-            ></Route>
-            <Route
-              path="CompleteTask"
-              element={<CompleteTask DataList={Data} Update={getData} />}
-            ></Route>
+          <Route path="/" element={<TodoList />}>
+            <Route path="/" element={<DailyTask />}></Route>
+            <Route path="CompleteTask" element={<CompleteTask />}></Route>
+            <Route path="Important" element={<ImportantTask />}></Route>
           </Route>
           <Route path="/Admin" element={<Admin />}>
-            <Route path="/Admin" element={<>hids</>}></Route>
-            <Route path="/Admin/Users" element={<Users />}></Route>
+            <Route path="/Admin" element={<Users />}></Route>
+            {/* <Route path="/Admin/Users" element={}></Route> */}
             <Route path="/Admin/Users/:id" element={<UserInfo />}></Route>
           </Route>
           <Route path="/UserProfile" element={<UserProfile />}></Route>

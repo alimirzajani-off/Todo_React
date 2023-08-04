@@ -1,16 +1,23 @@
-.todoInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
+.todoInputs {
   width: 100%;
-  background-color: #fff;
+  position: sticky;
   top: 0;
-  margin: 1rem 0;
-  padding: 1rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  border-radius: 8px;
-  .input {
+  .todoInput {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
     width: 100%;
+    background-color: #fff;
+    top: 0;
+    margin: 1rem 0;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 8px;
+    .input {
+      width: 85%;
+      margin-left: 0.5rem;
+    }
   }
 }

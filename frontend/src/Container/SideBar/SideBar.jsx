@@ -1,8 +1,12 @@
-import { IoSettingsOutline, IoExitOutline } from "react-icons/io5";
+import {
+  IoSettingsOutline,
+  IoExitOutline,
+  IoPersonCircleOutline,
+} from "react-icons/io5";
 import { Popover } from "antd";
 import "./SideBar.scss";
 import { SideBarItem } from "./SideBarItem/SideBarItem";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const SideBar = ({ Menu = [] }) => {
   const navigate = useNavigate();
@@ -11,6 +15,7 @@ export const SideBar = ({ Menu = [] }) => {
     localStorage.removeItem("admin");
     navigate("/SignIn");
   };
+
   return (
     <div className="SideBar">
       <div className="SideBarItems">
@@ -27,12 +32,17 @@ export const SideBar = ({ Menu = [] }) => {
           content={
             <div>
               <div className="SBPSetting">
-                {/* <Link className="SBPSItem SBPSIProfile" to={"/UserProfile"}>
+                <Link
+                  className={`SBPSItem SBPSIProfile ${
+                    localStorage.getItem("admin") == "true" ? "d-none" : ""
+                  }`}
+                  to={"/UserProfile"}
+                >
                   <div className="SBPSTitle">پروفایل کاربر</div>
                   <div className="SBPSIcon">
                     <IoPersonCircleOutline />
                   </div>
-                </Link> */}
+                </Link>
                 <div className="SBPSItem SBPSIExite" onClick={handleLogOut}>
                   <div className="SBPSTitle">خروج</div>
                   <div className="SBPSIcon">

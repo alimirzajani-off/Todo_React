@@ -6,3 +6,10 @@
     height: 3rem;
   }
 }
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:hover {
+  background-color: #ebebeb;
+}

@@ -1,4 +1,27 @@
 .UserProfile {
   margin: 0 5%;
   margin-right: 35vh;
+  .UPBtnsbox {
+    margin-top: 1rem;
+    text-align: end;
+    .UPBbox {
+      margin: 0 0.5rem 0 0;
+      width: 6rem;
+      background-color: #ffffff;
+    }
+    .btn-success {
+      color: #198754;
+    }
+    .btn-danger {
+      color: #dc3545;
+    }
+    .btn-success:hover {
+      background-color: #198754;
+      color: #ffffff;
+    }
+    .btn-danger:hover {
+      background-color: #dc3545;
+      color: #ffffff;
+    }
+  }
 }

@@ -1,11 +1,32 @@
 .UserInfo {
-  .UIBox {
+  display: flex;
+  flex-direction: column;
+  .UIInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 5px;
     margin: 1rem;
     padding: 1rem;
-    width: 24rem;
-    height: 26rem;
+    text-align: right;
+  }
+  .UIIColumn {
+    width: 20rem;
+  }
+  .UIChart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .UICBox {
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 5px;
+      margin: 1rem;
+      padding: 1rem;
+      width: 19rem;
+      height: 22rem;
+    }
   }
   .UIStatus {
   }

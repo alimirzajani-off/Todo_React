@@ -4,5 +4,10 @@
     "name": "کار های انجام شده",
     "icon": "IoCheckboxOutline",
     "to": "/CompleteTask"
+  },
+  {
+    "name": "کار های مورد علاقه",
+    "icon": "IoStarOutline",
+    "to": "/Important"
   }
 ]

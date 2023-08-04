@@ -6,6 +6,7 @@ export const Input = ({
   type = "text",
   label,
   placeholder = "",
+  readOnly,
 }) => {
   if (type == "checkbox") {
     return (
@@ -25,13 +26,17 @@ export const Input = ({
     return (
       <div className="input">
         {label && <label className="input-label">{label}</label>}
-        <input
-          className="input-box"
-          value={value}
-          onChange={onChange}
-          type={type}
-          placeholder={placeholder}
-        />
+        {readOnly ? (
+          value
+        ) : (
+          <input
+            className="input-box"
+            value={value}
+            onChange={onChange}
+            type={type}
+            placeholder={placeholder}
+          />
+        )}
       </div>
     );
   }

@@ -1,5 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { IoHomeOutline, IoCheckboxOutline } from "react-icons/io5";
+import {
+  IoHomeOutline,
+  IoCheckboxOutline,
+  IoStarOutline,
+} from "react-icons/io5";
 import "./SideBarItem.scss";
 import { useEffect, useState } from "react";
 
@@ -19,7 +23,11 @@ export const SideBarItem = (rest) => {
   const RenderIcon = () => {
     if (rest.icon == "IoHomeOutline") {
       return <IoHomeOutline />;
-    } else if (rest.icon == "IoCheckboxOutline") return <IoCheckboxOutline />;
+    } else if (rest.icon == "IoCheckboxOutline") {
+      return <IoCheckboxOutline />;
+    } else if (rest.icon == "IoStarOutline") {
+      return <IoStarOutline />;
+    }
   };
 
   return (

@@ -21,6 +21,7 @@ export const Users = () => {
         <tr className="AUTHeader">
           <th>نام کاربری</th>
           <th>ایمیل</th>
+          <th>جزئیات</th>
         </tr>
         {Data.map((item) => (
           <UserItem {...item} />

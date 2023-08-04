@@ -19,7 +19,7 @@ export const signUp = async (req, res) => {
       email.toLowerCase().includes("admin") ||
       username.toLowerCase().includes("admin")
     ) {
-      return res.status(400).json({ message: "user already exists" });
+      return res.status(400).json({ message: "new user is admin" });
     }
     const salt = await bcrypt.genSalt(10);
     newuser.password = await bcrypt.hash(password, salt);
@@ -85,5 +85,18 @@ export const getUserById = async (req, res) => {
     res.json(user);
   } catch {
     res.send({ message: "Error in Fetching user" });
+  }
+};
+
+export const updateUser = async (req, res) => {
+  try {
+    const updateUser = await User.updateOne(
+      { _id: req.params.id },
+      { $set: req.body }
+    );
+    console.log(updateUser);
+    res.status(200).json(updateUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };

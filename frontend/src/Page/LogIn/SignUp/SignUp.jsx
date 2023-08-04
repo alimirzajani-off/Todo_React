@@ -24,8 +24,11 @@ export const SignUp = () => {
         navigate("/SignIn");
       })
       .catch((e) => {
-        if (e.response.data.message) {
+        if (e.response.data.message == "new user is admin") {
+          console.log(e.response);
           toast.error("با عنوان ادمین نمیتوانید اکانتی ایجاد کنید");
+        } else if (e.response.data.message == "user already exists") {
+          toast.error("کاربری با این نام کاربری موجود است");
         }
       });
   };
