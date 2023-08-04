@@ -6,7 +6,7 @@ export const DailyTask = (props) => {
 
   return (
     <div className="DailyTask">
-      <div className="DTTodo">
+      <div className="DT DTTodo">
         <h4>برنامه هایی که باید انجام شوند</h4>
         {Data?.filter((item) => item.status == "todo").length > 0
           ? Data?.filter((item) => item.status == "todo")?.map((items) => (
@@ -20,7 +20,7 @@ export const DailyTask = (props) => {
             ))
           : "موردی وجود ندارد"}
       </div>
-      <div className="DTDone">
+      <div className="DT DTDone">
         <h4>برنامه های انجام شده</h4>
         {Data?.filter((item) => item.status == "done").length > 0
           ? Data?.filter((item) => item.status == "done").map((items) => (

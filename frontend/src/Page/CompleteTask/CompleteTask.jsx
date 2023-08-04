@@ -11,7 +11,7 @@ export const CompleteTask = (props) => {
     setdata(Data);
   }, [Data]);
   return (
-    <>
+    <div className="DT">
       {Data.length
         ? Data?.filter((item) => item.status == "done").map((items) => (
             <TodoItem
@@ -22,6 +22,6 @@ export const CompleteTask = (props) => {
             />
           ))
         : ""}
-    </>
+    </div>
   );
 };

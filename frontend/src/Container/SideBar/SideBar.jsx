@@ -25,7 +25,7 @@ export const SideBar = ({ Menu = [] }) => {
       </div>
       <div className="SideBarFooter">
         <Popover
-          title="تنظیمات"
+          title=""
           trigger={"click"}
           className="SideBarPopover"
           style={{ textAlign: "right", fontFamily: "KalamehWebBold" }}
