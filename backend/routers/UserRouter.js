@@ -2,6 +2,7 @@ import express from "express";
 import {
   getAllUser,
   getUserById,
+  resetUserPassword,
   signIn,
   signUp,
   updateUser,
@@ -14,5 +15,6 @@ router.post("/user/signin", signIn);
 router.get("/user/getusers", getAllUser);
 router.get("/user/:id", getUserById);
 router.patch("/user/:id", updateUser);
+router.patch("/user/reset/:username", resetUserPassword);
 
 export default router;

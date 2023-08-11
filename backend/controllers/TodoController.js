@@ -6,8 +6,8 @@ export const getTodo = async (req, res) => {
     const user = await User.findOne({ token: token });
     const Todos = await Todo.find({ userId: user.id });
     res.json(Todos);
-  } catch {
-    json.status(500).json({ message: error.message });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
 

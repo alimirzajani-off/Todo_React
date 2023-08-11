@@ -15,10 +15,7 @@ export const signUp = async (req, res) => {
     if (user) {
       return res.status(400).json({ message: "user already exists" });
     }
-    if (
-      email.toLowerCase().includes("admin") ||
-      username.toLowerCase().includes("admin")
-    ) {
+    if (email.toLowerCase() == "admin" || username.toLowerCase() == "admin") {
       return res.status(400).json({ message: "new user is admin" });
     }
     const salt = await bcrypt.genSalt(10);
@@ -94,7 +91,24 @@ export const updateUser = async (req, res) => {
       { _id: req.params.id },
       { $set: req.body }
     );
-    console.log(updateUser);
+    res.status(200).json(updateUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const resetUserPassword = async (req, res) => {
+  const { username } = req.params;
+  const { password } = req.body;
+  let user = await User.findOne({ username });
+  try {
+    let reqBody = req.body;
+    const salt = await bcrypt.genSalt(10);
+    reqBody.password = await bcrypt.hash(password, salt);
+    const updateUser = await User.updateOne(
+      { _id: user._id },
+      { $set: reqBody }
+    );
     res.status(200).json(updateUser);
   } catch (error) {
     res.status(500).json({ message: error.message });

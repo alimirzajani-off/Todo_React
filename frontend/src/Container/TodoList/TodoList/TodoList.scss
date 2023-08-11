@@ -1,3 +1,42 @@
+@media screen and (max-width: 880px) {
+  .Todo {
+    .TodoList {
+      margin-right: 5% !important;
+    }
+    .todoInputs {
+      top: 5.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 5rem !important;
+      width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 407px) {
+  .Todo {
+    .todoInputs {
+      top: 7.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 7rem !important;
+    }
+  }
+  .TITitle {
+    max-width: 250px !important;
+  }
+}
+
+@media screen and (max-width: 273px) {
+  .Todo {
+    .todoInputs {
+      top: 9.5rem !important;
+    }
+    .TodoLists {
+      margin-top: 9rem !important;
+    }
+  }
+}
 .Todo {
   display: flex;
   align-items: stretch;

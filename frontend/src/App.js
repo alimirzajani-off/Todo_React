@@ -21,6 +21,7 @@ import { Admin } from "./Page/Admin/Admin";
 import { Users } from "./Page/Users/Users";
 import { UserInfo } from "./Page/Users/UserInfo/UserInfo";
 import { ImportantTask } from "./Page/ImportantTask/ImportantTask";
+import { ResetPassword } from "./Page/LogIn/ResetPassword/ResetPassword";
 
 function App() {
   const [Data, setData] = useState([]);
@@ -52,6 +53,7 @@ function App() {
           <Route path="/UserProfile" element={<UserProfile />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/resetPassword" element={<ResetPassword />}></Route>
         </Routes>
       </Router>
     </div>

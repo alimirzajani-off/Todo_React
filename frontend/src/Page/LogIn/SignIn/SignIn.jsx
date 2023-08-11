@@ -9,6 +9,7 @@ export const SignIn = () => {
   const navigate = useNavigate();
   const [password, setpassword] = useState("");
   const [email, setemail] = useState("");
+
   const HandleSignIn = (e) => {
     e.preventDefault();
     const data = {
@@ -52,10 +53,12 @@ export const SignIn = () => {
             className="btn btn-success SingIn-button"
             onClick={HandleSignIn}
           >
-            ورود <IoLogInOutline />
+            <IoLogInOutline />
+            ورود
           </button>
-          <div>
+          <div className="SingInLink">
             <Link to="/SignUp">ثبت نام</Link>
+            <Link to="/resetPassword">فراموشی رمز عبور</Link>
           </div>
         </div>
       </form>

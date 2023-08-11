@@ -1,3 +1,20 @@
+@media screen and (max-width: 880px) {
+  .SideBar {
+    top: 0 !important;
+    width: 100% !important;
+    height: max-content;
+    z-index: 100;
+    border-bottom-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-left-radius: 0 !important;
+    .SideBarItems {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
 .SideBar {
   display: flex;
   width: 27vh;
