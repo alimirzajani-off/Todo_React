@@ -7,7 +7,6 @@ export const CompleteTask = (props) => {
 
   const [data, setdata] = useState([]);
   useEffect(() => {
-    console.log(Data);
     setdata(Data);
   }, [Data]);
   return (
@@ -21,7 +20,7 @@ export const CompleteTask = (props) => {
               {...items}
             />
           ))
-        : ""}
+        : "موردی وجود ندارد"}
     </div>
   );
 };

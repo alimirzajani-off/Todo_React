@@ -24,17 +24,6 @@ import { ImportantTask } from "./Page/ImportantTask/ImportantTask";
 import { ResetPassword } from "./Page/LogIn/ResetPassword/ResetPassword";
 
 function App() {
-  const [Data, setData] = useState([]);
-  // const navigate = useNavigate();
-  const getData = async () => {
-    let jwt = localStorage.getItem("jwt");
-    await axios
-      .get("http://localhost:5000/todos", { headers: { auth: jwt } })
-      .then((res) => {
-        setData(res.data);
-      });
-  };
-
   return (
     <div className="App">
       <ToastContainer theme="colored" position="bottom-right" />
@@ -47,7 +36,6 @@ function App() {
           </Route>
           <Route path="/Admin" element={<Admin />}>
             <Route path="/Admin" element={<Users />}></Route>
-            {/* <Route path="/Admin/Users" element={}></Route> */}
             <Route path="/Admin/Users/:id" element={<UserInfo />}></Route>
           </Route>
           <Route path="/UserProfile" element={<UserProfile />}></Route>

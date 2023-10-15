@@ -30,14 +30,6 @@ const Todo = mongoose.Schema({
     type: String,
     required: false,
   },
-  timeStart: {
-    type: String,
-    required: false,
-  },
-  timeEnd: {
-    type: String,
-    required: false,
-  },
   userId: {
     type: String,
     required: false,

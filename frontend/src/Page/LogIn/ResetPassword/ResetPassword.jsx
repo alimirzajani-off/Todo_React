@@ -19,7 +19,7 @@ export const ResetPassword = () => {
     axios
       .patch(`http://localhost:5000/user/reset/${username}`, data)
       .then((res) => {
-        console.log(res);
+        navigate("/signin");
       })
       .catch((e) => {
         if (e.response.data.message == "new user is admin") {

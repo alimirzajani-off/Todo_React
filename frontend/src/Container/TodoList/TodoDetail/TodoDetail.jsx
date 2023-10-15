@@ -210,7 +210,7 @@ export const TodoDetail = ({ ...rest }) => {
               locale={persian_fa}
             />
           </div>
-          <div className="TIContent">
+          {/* <div className="TIContent">
             <div className="TICTitle">
               <h5>ساعت شروع</h5>
             </div>
@@ -263,7 +263,7 @@ export const TodoDetail = ({ ...rest }) => {
               calendar={persian}
               locale={persian_fa}
             />
-          </div>
+          </div> */}
         </div>
         <div className="TIFooter">
           <IoArrowBackOutline onClick={(e) => rest.closeDetail(null)} />

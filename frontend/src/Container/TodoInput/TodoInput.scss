@@ -20,4 +20,25 @@
       margin-left: 0.5rem;
     }
   }
+  .TodoSearchBox {
+    display: flex;
+    margin: 1rem 0;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    .todoSort {
+      width: 100%;
+    }
+  }
+}
+
+.TSItems {
+  .TSItem {
+    padding: 0.25rem;
+    border-radius: 5px;
+  }
+}
+.TSIActive {
+  background-color: #b6b6b63d;
 }

@@ -39,6 +39,9 @@
   .TodoDetail {
     z-index: 150;
   }
+  .TodoSearchBox {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 653px) {

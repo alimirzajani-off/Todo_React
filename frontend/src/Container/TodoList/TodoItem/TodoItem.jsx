@@ -11,14 +11,14 @@ export const TodoItem = (props) => {
     } else {
       status = "todo";
     }
-
+    console.log(e);
     const data = await {
       name: props.name,
       status,
     };
-
+    console.log(data);
     await axios.patch(`http://localhost:5000/todos/${props._id}`, data);
-    props.Update();
+    props.Update("update");
   };
 
   const handleFavorite = async (e) => {
